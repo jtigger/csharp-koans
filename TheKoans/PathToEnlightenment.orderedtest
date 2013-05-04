@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<OrderedTest name="PathToEnlightenment" storage="c:\dev\csharp-koans\thekoans\pathtoenlightenment.orderedtest" id="2c11c1ff-92ea-4ef2-8d2a-1e1c71da1e52" continueAfterFailure="true" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <Execution id="52d94d0c-bc6f-4d3e-88d5-9a03a64dca21" />
+  <TestLinks>
+    <TestLink id="3f939ea7-d919-f759-563e-26664545ac26" name="AssertTruth" storage="bin\debug\thekoans.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <TestLink id="7f3917c4-5a82-5cd3-26d4-18a2cd63a5ae" name="AssertWithMessage" storage="bin\debug\thekoans.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <TestLink id="7a81c80c-62f2-1e50-a6af-f710340087c1" name="AssertEquality" storage="bin\debug\thekoans.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <TestLink id="e6343b91-b117-86a0-db63-a533ca504a68" name="NullIsNotAnInstanceOfObjectAndInvokingAMethodThrowsNullReferenceException" storage="bin\debug\thekoans.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  </TestLinks>
+</OrderedTest>

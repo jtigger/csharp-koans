@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheKoans", ".\TheKoans\TheKoans.csproj", "{5513515D-0BDE-41E5-9389-1F0689686030}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{814DC64D-E636-41D9-B5CC-8F4875152121}"
+	ProjectSection(SolutionItems) = preProject
+		csharp-koans.vsmdi = csharp-koans.vsmdi
+		Local.testsettings = Local.testsettings
+		TraceAndTestImpact.testsettings = TraceAndTestImpact.testsettings
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(TestCaseManagementSettings) = postSolution
+		CategoryFile = csharp-koans.vsmdi
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|Mixed Platforms = Debug|Mixed Platforms
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|Mixed Platforms = Release|Mixed Platforms
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5513515D-0BDE-41E5-9389-1F0689686030}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5513515D-0BDE-41E5-9389-1F0689686030}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5513515D-0BDE-41E5-9389-1F0689686030}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{5513515D-0BDE-41E5-9389-1F0689686030}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{5513515D-0BDE-41E5-9389-1F0689686030}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{5513515D-0BDE-41E5-9389-1F0689686030}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5513515D-0BDE-41E5-9389-1F0689686030}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5513515D-0BDE-41E5-9389-1F0689686030}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{5513515D-0BDE-41E5-9389-1F0689686030}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{5513515D-0BDE-41E5-9389-1F0689686030}.Release|x86.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
