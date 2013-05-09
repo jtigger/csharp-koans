@@ -46,6 +46,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AboutNull.cs" />
+    <Compile Include="AboutStrings.cs" />
+    <Compile Include="KoanHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="AboutAsserts.cs" />
   </ItemGroup>
