@@ -53,6 +53,7 @@
     <Compile Include="AboutMethods.cs" />
     <Compile Include="AboutNil.cs" />
     <Compile Include="AboutNull.cs" />
+    <Compile Include="AboutObjects.cs" />
     <Compile Include="AboutStrings.cs" />
     <Compile Include="KoanHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
