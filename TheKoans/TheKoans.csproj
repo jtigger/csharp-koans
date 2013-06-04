@@ -51,7 +51,6 @@
     <Compile Include="AboutHashes.cs" />
     <Compile Include="AboutInheritance.cs" />
     <Compile Include="AboutMethods.cs" />
-    <Compile Include="AboutNil.cs" />
     <Compile Include="AboutNull.cs" />
     <Compile Include="AboutObjects.cs" />
     <Compile Include="AboutStrings.cs" />

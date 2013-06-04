@@ -22,7 +22,7 @@ namespace TheKoans
                 b = false;
             }
 
-            Assert.Equals(FillMeIn, b);
+            Assert.Equals(FILL_ME_IN, b);
         }
 
         [TestMethod]
@@ -34,7 +34,7 @@ namespace TheKoans
             else
                 b = false;
 
-            Assert.Equals(FillMeIn, b);
+            Assert.Equals(FILL_ME_IN, b);
 
         }
 
@@ -47,7 +47,7 @@ namespace TheKoans
                 b = true;
             }
 
-            Assert.Equals(FillMeIn, b);
+            Assert.Equals(FILL_ME_IN, b);
         }
 
         [TestMethod]
@@ -57,7 +57,7 @@ namespace TheKoans
             if (true)
                 b = true;
 
-            Assert.Equals(FillMeIn, b);
+            Assert.Equals(FILL_ME_IN, b);
         }
 
         [TestMethod]
@@ -79,8 +79,8 @@ namespace TheKoans
         [TestMethod]
         public void TernaryOperators()
         {
-            Assert.Equals(FillMeIn, (true ? 1 : 0));
-            Assert.Equals(FillMeIn, (false ? 1 : 0));
+            Assert.Equals(FILL_ME_IN, (true ? 1 : 0));
+            Assert.Equals(FILL_ME_IN, (false ? 1 : 0));
         }
 
         //This is out of place for control statements, but necessary for Koan 8
@@ -102,7 +102,7 @@ namespace TheKoans
 
             int x = nullableInt ?? 42;
 
-            Assert.Equals(FillMeIn, x);
+            Assert.Equals(FILL_ME_IN, x);
         }
 
         [TestMethod]
@@ -123,9 +123,9 @@ namespace TheKoans
             if (myType is AboutNull)
                 isAboutMethods = true;
 
-            Assert.Equals(FillMeIn, isKoan);
-            Assert.Equals(FillMeIn, isAboutControlStatements);
-            Assert.Equals(FillMeIn, isAboutMethods);
+            Assert.Equals(FILL_ME_IN, isKoan);
+            Assert.Equals(FILL_ME_IN, isAboutControlStatements);
+            Assert.Equals(FILL_ME_IN, isAboutMethods);
 
         }
 
@@ -139,7 +139,7 @@ namespace TheKoans
                 result = result * i;
                 i += 1;
             }
-            Assert.Equals(FillMeIn, result);
+            Assert.Equals(FILL_ME_IN, result);
         }
 
         [TestMethod]
@@ -153,7 +153,7 @@ namespace TheKoans
                 result = result * i;
                 i += 1;
             }
-            Assert.Equals(FillMeIn, result);
+            Assert.Equals(FILL_ME_IN, result);
         }
 
         [TestMethod]
@@ -167,7 +167,7 @@ namespace TheKoans
                 if ((i % 2) == 0) { continue; }
                 result.Add(i);
             }
-            Assert.Equals(FillMeIn, result);
+            Assert.Equals(FILL_ME_IN, result);
         }
 
         [TestMethod]
@@ -178,7 +178,7 @@ namespace TheKoans
             {
                 list[i] = (list[i].ToUpper());
             }
-            Assert.Equals(FillMeIn, list);
+            Assert.Equals(FILL_ME_IN, list);
         }
 
         [TestMethod]
@@ -190,8 +190,8 @@ namespace TheKoans
             {
                 finalList.Add(item.ToUpper());
             }
-            Assert.Equals(FillMeIn, list);
-            Assert.Equals(FillMeIn, finalList);
+            Assert.Equals(FILL_ME_IN, list);
+            Assert.Equals(FILL_ME_IN, finalList);
         }
 
         [TestMethod]
@@ -207,7 +207,7 @@ namespace TheKoans
             }
             catch (Exception ex)
             {
-                Assert.Equals(typeof(FillMeIn), ex.GetType());
+                Assert.Equals(typeof(FILL_ME_IN), ex.GetType());
             }
         }
 
@@ -236,7 +236,7 @@ namespace TheKoans
                 whoCaughtTheException = "When we tried to move to the next item in the list";
             }
 
-            Assert.Equals(FillMeIn, whoCaughtTheException);
+            Assert.Equals(FILL_ME_IN, whoCaughtTheException);
         }
 
     }
