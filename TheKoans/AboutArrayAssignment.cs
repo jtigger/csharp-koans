@@ -18,7 +18,7 @@ namespace TheKoans
             //Even though we don't specify types explicitly, the compiler
             //will pick one for us
             var name = "John";
-            Assert.Equals(typeof(FillMeIn), name.GetType());
+            Assert.Equals(typeof(FILL_ME_IN), name.GetType());
 
             //but only if it can. So this doesn't work
             //var array = null;
@@ -33,7 +33,7 @@ namespace TheKoans
             //Even though we don't specify types explicitly, the compiler
             //will pick one for us
             var names = new[] { "John", "Smith" };
-            Assert.Equals(typeof(FillMeIn), names.GetType());
+            Assert.Equals(typeof(FILL_ME_IN), names.GetType());
 
             //but only if it can. So this doesn't work
             //var array = new[] { "John", 1 };
@@ -46,8 +46,8 @@ namespace TheKoans
             //still have to be explicit
             const string firstName = "John";
             const string lastName = "Smith";
-            Assert.Equals(FillMeIn, firstName);
-            Assert.Equals(FillMeIn, lastName);
+            Assert.Equals(FILL_ME_IN, firstName);
+            Assert.Equals(FILL_ME_IN, lastName);
         }
 
     }
