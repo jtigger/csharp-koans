@@ -23,4 +23,5 @@ If you would like to follow the "Path to Enlightenment" (i.e. address the most r
 5. Right-Click and select "Run Selection" this will open the "Test Results" panel and show the "pathtoenlightenment" test, having failed.
 6. In the "Test Results" panel, double-click on "pathtoenlightnment".  This will bring up a Test Results; tests will be in order along the "path to enlightenment".
 7. Double-click on the top-most failing test
-
+8. Read the "Error Message" section for a hint.
+9. In the "Error Stack Trace" section, click on the link into the tests.
