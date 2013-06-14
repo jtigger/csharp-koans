@@ -12,13 +12,13 @@ namespace TheKoans
         [TestMethod]
         public void AssertTruth()
         {
-            Assert.IsTrue(false);   // Your long journey begins with a simple step.  We seek what's true, help us find it.
+            Assert.IsTrue(FILL_ME__IN);   // Your long journey begins with a simple step.  We seek what's true, help us find it.
         }
 
         [TestMethod]
         public void AssertsShouldHaveMessages()
         {
-            Assert.IsTrue(false, "This message should help you understand what failed. Please help us find truth.");
+            Assert.IsTrue(FILL_ME__IN, "This message should help you understand what failed. Please help us find truth.");
         }
 
         [TestMethod]
@@ -45,7 +45,7 @@ namespace TheKoans
         [TestMethod]
         public void AssertFail()
         {
-            bool thePathToEnlightment = false;
+            bool thePathToEnlightment = FILL_ME__IN;
             if (!thePathToEnlightment)
             {
                 Assert.Fail("Taking an unfortunate code path breaks your karma. Change the path towards truth.");
