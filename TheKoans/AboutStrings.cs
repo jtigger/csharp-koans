@@ -7,7 +7,6 @@ namespace TheKoans
     [TestClass]
     public class AboutStrings : KoanHelper
     {
-
         //Note: This is one of the longest katas and, perhaps, one
         //of the most important. String behavior in .NET is not
         //always what you expect it to be, especially when it comes
@@ -24,6 +23,7 @@ namespace TheKoans
         [TestMethod]
         public void SingleQuotedStringsAreNotStrings()
         {
+            // Note the use of single quotes below.  They're not double quotes, which are definitely used for strings.
             var str = 'H';
             Assert.AreEqual(typeof(FILL_ME_IN), str.GetType(), "A single tree does not a forest make.");
         }
@@ -75,9 +75,11 @@ broken line";
             //(\r\n for Windows, \n for Linux) you shouldn't just type in
             //the hardcoded escape sequence. A much better way
             //(We'll handle concatenation and better ways of that in a bit)
+            const string verbatimString = @"I
+am a
+broken line";
             var literalString = "I" + Environment.NewLine + "am a" + Environment.NewLine + "broken line";
-            var vebatimString = FILL_ME_IN;
-            Assert.AreEqual(literalString, vebatimString, "Is a newline one or two characters?");
+            Assert.AreEqual(literalString, verbatimString, "Is a newline one or two characters?");
         }
 
         [TestMethod]
@@ -120,7 +122,7 @@ broken line";
 
             var strA = "Hello, ";
             var originalString = strA;
-            var strB = "World";
+            const string strB = "World";
             strA += strB;
             Assert.AreEqual(FILL_ME_IN, originalString, "'Be yourself. The world worships the original.' - Jacques Cocteau");
 
@@ -139,7 +141,7 @@ broken line";
         {
             //As shows in the above Koan, concatenating lots of strings
             //is a Bad Idea(tm). If you need to do that, then do this instead
-            var strBuilder = new System.Text.StringBuilder();
+            var strBuilder = new StringBuilder();
             for (int i = 0; i < 100; i++) { strBuilder.Append("a"); }
             var str = strBuilder.ToString();
             Assert.AreEqual(FILL_ME_IN, str.Length, "When Charles M. Schulz drew Charlie Brown's screams (AAAARGH!) - did he ever wonder if he mispelled them?");
@@ -198,7 +200,8 @@ broken line";
         public void YouCanGetASingleCharacterFromAString()
         {
             var str = "Bacon, lettuce and tomato";
-            Assert.AreEqual(FILL_ME_IN, str[6], "0-based arrays are sometimes confusing.. do you count the 0 or not?");
+            // Remember, because we are dealing with characters, use single quotes to surround your choice.
+            Assert.AreEqual(FILL_ME_IN, str[5], "0-based arrays are sometimes confusing.. do you count the 0 or not?");
         }
 
         [TestMethod]
@@ -210,11 +213,20 @@ broken line";
         }
 
         [TestMethod]
+        public void CanCheckEqualityOfStringsWithAssertButStringCollectionsRequireSomethingDifferent()
+        {
+            var strArray1 = new[] { "alpha", "beta", "gamma" };
+            var strArray2 = new[] { "alpha", "beta", "gamma" };
+            Assert.AreEqual(strArray1, strArray2, "If only there another call other than Assert, but just for Collections...");
+        }
+
+        [TestMethod]
         public void StringsCanBeSplit()
         {
             var str = "Sausage Egg Cheese";
             string[] words = str.Split();
-            Assert.AreEqual(new[] { FILL_ME_IN }, words, "Identify all the elements in the 'words' string array based on the 'str' string.  And hurry.. I'm getting hungry.");
+            // Note that we're using a different
+            CollectionAssert.AreEqual(new[] { FILL_ME_IN }, words, "Identify all the elements in the 'words' string array based on the 'str' string.  And hurry.. I'm getting hungry.");
         }
 
         [TestMethod]
@@ -222,7 +234,7 @@ broken line";
         {
             var str = "Peter:Flopsy:Mopsy:Cottontail";
             string[] words = str.Split(':');
-            Assert.AreEqual(new[] { FILL_ME_IN }, words, "I just had to find a way to split hares.");
+            CollectionAssert.AreEqual(new[] { FILL_ME_IN }, words, "I just had to find a way to split hares.");
         }
 
         [TestMethod]
@@ -231,7 +243,7 @@ broken line";
             var str = "the:rain:in:spain";
             var regex = new System.Text.RegularExpressions.Regex(":");
             string[] words = regex.Split(str);
-            Assert.AreEqual(new[] { FILL_ME_IN }, words, "Ever watch 'My Fair Lady'?  I don't think one could come up with a regular expression for how Eliza spoke.");
+            CollectionAssert.AreEqual(new[] { FILL_ME_IN }, words, "The way Eliza Doolittle first spoke in 'My Fair Lady' would break anyone's Karma.");
 
             //A full treatment of regular expressions is beyond the scope
             //of this tutorial. The book "Mastering Regular Expressions"
@@ -287,7 +299,7 @@ broken line";
             var strProper = "United States of America";
             var strUpper = "UNITED STATES OF AMERICA";
 
-            Assert.AreEqual(String.Compare(strProper, strUpper, true), FILL_ME_IN, "Six of one, half a dozen of another.");
+            Assert.AreEqual(String.Compare(strProper, strUpper, StringComparison.OrdinalIgnoreCase), FILL_ME_IN, "Six of one, half a dozen of another.");
 
             // And be aware there are additional ways to compare (like .CompareTo), 
             // but that might be better under AboutObjects?
@@ -297,7 +309,7 @@ broken line";
         public void InsertingStrings()
         {
             var str = "John Adams";
-            Assert.AreEqual(str.Insert(5, "Quincy"), FILL_ME_IN, "I wonder if they called the 6th President of the United States 'Q', like we used to call the last Bush president 'W'...");
+            Assert.AreEqual(str.Insert(5, "Quincy "), FILL_ME_IN, "I wonder if they called the 6th President of the United States 'Q', like we used to call the last Bush president 'W'...");
 
             // Note that Insert() does not change the value of immutable string str
             // Assert.AreEqual(str, "John Quincy Adams"); // This would not pass
