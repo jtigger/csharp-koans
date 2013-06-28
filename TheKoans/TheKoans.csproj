@@ -45,7 +45,7 @@
     </CodeAnalysisDependentAssemblyPaths>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AboutArrayAssignment.cs" />
+    <Compile Include="AboutVariables.cs" />
     <Compile Include="AboutArrays.cs" />
     <Compile Include="AboutControlStatements.cs" />
     <Compile Include="AboutHashes.cs" />

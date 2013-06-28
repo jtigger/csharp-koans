@@ -127,12 +127,14 @@ namespace TheKoans
         }
 
         [TestMethod]
-        public void Shifting()
+        public void ManagingElementsAtBothEnds()
         {
+            //In Ruby, "shifting" is defined as follows:
             //Shift == Remove First Element
             //Unshift == Insert Element at Beginning
-            //C# doesn't provide this natively. You have a couple
-            //of options, but we'll use the LinkedList<T> to implement
+
+            //C# doesn't provide this natively. You have a couple of options, but we'll use the LinkedList<T> to implement
+            //In C#, the function names are relatively intuitive, but Shift = RemoveFirst and Unshift = AddFirst.
             var array = new[] { "Hello", "World" };
             var list = new LinkedList<string>(array);
 
@@ -140,7 +142,7 @@ namespace TheKoans
             CollectionAssert.AreEqual((ICollection) FILL_ME_IN, list.ToArray(), "There should be enough for AboutLists.. Why is this here?");
 
             list.RemoveLast();
-            CollectionAssert.AreEqual((ICollection)FILL_ME_IN, list.ToArray(), "You don't really see Hello Kitty with a mouth... so would Hello Kitty ever say 'Hello'?");
+            CollectionAssert.AreEqual((ICollection)FILL_ME_IN, list.ToArray(), "You don't usually see Hello Kitty with a mouth... so would Hello Kitty ever really say 'Hello'?");
 
             list.RemoveFirst();
             CollectionAssert.AreEqual((ICollection)FILL_ME_IN, list.ToArray(), "Is it me you're looking for?");

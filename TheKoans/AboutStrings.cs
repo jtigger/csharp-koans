@@ -73,12 +73,15 @@ broken line";
         {
             //Since line endings are different on different platforms
             //(\r\n for Windows, \n for Linux) you shouldn't just type in
-            //the hardcoded escape sequence. A much better way
+            //the hardcoded escape sequence. A much better way would be to
+            //use a property from the Environment class; change the line below
+            var environmentNewLine = FILL_ME_IN;
+            
             //(We'll handle concatenation and better ways of that in a bit)
             const string verbatimString = @"I
 am a
 broken line";
-            var literalString = "I" + Environment.NewLine + "am a" + Environment.NewLine + "broken line";
+            var literalString = "I" + environmentNewLine + "am a" + environmentNewLine + "broken line";
             Assert.AreEqual(literalString, verbatimString, "Is a newline one or two characters?");
         }
 
