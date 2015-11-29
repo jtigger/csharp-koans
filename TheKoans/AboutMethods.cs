@@ -39,19 +39,19 @@ namespace TheKoans
         [TestMethod]
         public void ExtensionMethodsShowUpInTheCurrentClass()
         {
-            Assert.Equals(FILL_ME_IN, this.HelloWorld());
+            Assert.AreEqual(FILL_ME_IN, this.HelloWorld());
         }
 
         [TestMethod]
         public void ExtensionMethodsWithParameters()
         {
-            Assert.Equals(FILL_ME_IN, this.SayHello("Cory"));
+            Assert.AreEqual(FILL_ME_IN, this.SayHello("Cory"));
         }
 
         [TestMethod]
         public void ExtensionMethodsWithVariableParameters()
         {
-            Assert.Equals(FILL_ME_IN, this.MethodWithVariableArguments("Cory", "Will", "Corey"));
+            CollectionAssert.AreEqual(FILL_ME_IN, this.MethodWithVariableArguments("Cory", "Will", "Corey"));
         }
 
         //Extension methods can extend any class my referencing 
@@ -61,7 +61,7 @@ namespace TheKoans
         [TestMethod]
         public void ExtendingCoreClasses()
         {
-            Assert.Equals(FILL_ME_IN, "Cory".SayHi());
+            Assert.AreEqual(FILL_ME_IN, "Cory".SayHi());
         }
 
         //Of course, any of the parameter things you can do with 
@@ -75,7 +75,7 @@ namespace TheKoans
         [TestMethod]
         public void LocalMethodsWithVariableParams()
         {
-            Assert.Equals(FILL_ME_IN, this.LocalMethodWithVariableParameters("Cory", "Will", "Corey"));
+            CollectionAssert.AreEqual(FILL_ME_IN, this.LocalMethodWithVariableParameters("Cory", "Will", "Corey"));
         }
 
         //Note how we called the method by saying "this.LocalMethodWithVariableParameters"
@@ -84,7 +84,7 @@ namespace TheKoans
         [TestMethod]
         public void LocalMethodsWithoutExplicitReceiver()
         {
-            Assert.Equals(FILL_ME_IN, LocalMethodWithVariableParameters("Cory", "Will", "Corey"));
+            CollectionAssert.AreEqual(FILL_ME_IN, LocalMethodWithVariableParameters("Cory", "Will", "Corey"));
         }
 
         //But it is required for Extension Methods, since it needs
@@ -110,20 +110,20 @@ namespace TheKoans
         [TestMethod]
         public void CallingStaticMethodsWithoutAnInstance()
         {
-            Assert.Equals(FILL_ME_IN, InnerSecret.Key());
+            Assert.AreEqual(FILL_ME_IN, InnerSecret.Key());
         }
 
         //In fact, you can't call it on an instance variable
         //of the object. So this wouldn't compile:
         //InnerSecret secret = new InnerSecret();
-        //Assert.Equals(FILL_ME_IN, secret.Key());
+        //Assert.AreEqual(FILL_ME_IN, secret.Key());
 
 
         [TestMethod]
         public void CallingPublicMethodsOnAnInstance()
         {
             InnerSecret secret = new InnerSecret();
-            Assert.Equals(FILL_ME_IN, secret.Secret());
+            Assert.AreEqual(FILL_ME_IN, secret.Secret());
         }
 
         //Protected methods can only be called by a subclass
@@ -134,7 +134,7 @@ namespace TheKoans
         public void CallingProtectedMethodsOnAnInstance()
         {
             StateSecret secret = new StateSecret();
-            Assert.Equals(FILL_ME_IN, secret.InformationLeak());
+            Assert.AreEqual(FILL_ME_IN, secret.InformationLeak());
         }
 
         //But, we can't call the private methods of InnerSecret
@@ -151,7 +151,7 @@ namespace TheKoans
             string superSecretMessage = secret.GetType()
                 .GetMethod("SooperSeekrit", System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance)
                 .Invoke(secret, null) as string;
-            Assert.Equals(FILL_ME_IN, superSecretMessage);
+            Assert.AreEqual(FILL_ME_IN, superSecretMessage);
         }
 
         //Up till now we've had explicit return types. It's also
@@ -167,9 +167,9 @@ namespace TheKoans
         [TestMethod]
         public void CallingGenericMethods()
         {
-            Assert.Equals(typeof(FILL_ME_IN), GiveMeBack<int>(1).GetType());
+            Assert.AreEqual(typeof(FILL_ME_IN), GiveMeBack<int>(1).GetType());
 
-            Assert.Equals(FILL_ME_IN, GiveMeBack<string>("Hi!"));
+            Assert.AreEqual(FILL_ME_IN, GiveMeBack<string>("Hi!"));
         }
 
     }

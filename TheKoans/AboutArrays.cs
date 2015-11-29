@@ -27,7 +27,7 @@ namespace TheKoans
         {
             var array = new[] { 42 };
             Assert.AreEqual(typeof(int[]), array.GetType(), "You don't have to specify a type if the elements can be inferred");
-            Assert.AreEqual(new int[] { 42 }, array, "These arrays are literally equal... But you won't see this string in the error message.");
+            CollectionAssert.AreEqual(new int[] { 42 }, array, "These arrays are literally equal... But you won't see this string in the error message.");
 
             //Are arrays 0-based or 1-based?
             Assert.AreEqual(42, array[((int)FILL_ME_IN)], "Well, it's either 0 or 1.. you have a 110010-110010 chance of getting it right.");
@@ -108,7 +108,7 @@ namespace TheKoans
             var array = new[] { "peanut", "butter", "and", "jelly" };
 
             // Calling an array's Take(x) method will return the specified x number of elements from the start of the array.
-            Assert.AreEqual(new string[] { "peanut", "butter" }, array.Take((int) FILL_ME_IN).ToArray(), "George Washington Carver would be proud you've found another use of peanut butter.");
+            CollectionAssert.AreEqual(new string[] { "peanut", "butter" }, array.Take((int) FILL_ME_IN).ToArray(), "George Washington Carver would be proud you've found another use of peanut butter.");
             // Calling an array's Skip(y) method will bypass the specified y number of elements from the start of the array and return the remaining elements.
             CollectionAssert.AreEqual(new string[] { "and" }, array.Skip((int)FILL_ME_IN).Take(1).ToArray(), "Your array slicing skills need more practice to hone your C# Karma.");
         }

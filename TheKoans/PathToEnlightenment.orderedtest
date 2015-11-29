@@ -1,11 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<<<<<<< Updated upstream
 <OrderedTest name="pathtoenlightenment" storage="c:\development\csharp-koans\thekoans\pathtoenlightenment.orderedtest" id="2c11c1ff-92ea-4ef2-8d2a-1e1c71da1e52" continueAfterFailure="true" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
   <Execution id="6c92a212-74cb-4ce0-881b-c07ba3291a3d" />
-=======
-<OrderedTest name="pathtoenlightenment" storage="c:\documents and settings\rjg\my documents\github\csharp-koans\thekoans\pathtoenlightenment.orderedtest" id="2c11c1ff-92ea-4ef2-8d2a-1e1c71da1e52" continueAfterFailure="true" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
-  <Execution id="e7458d8b-0e40-4159-863e-4d7939f42fe7" />
->>>>>>> Stashed changes
   <TestLinks>
     <TestLink id="3f939ea7-d919-f759-563e-26664545ac26" name="AssertTruth" storage="bin\debug\thekoans.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
     <TestLink id="baf91e44-1804-eaaa-8e38-e430f38a5902" name="AssertsShouldHaveMessages" storage="bin\debug\thekoans.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
