@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace TheKoans
@@ -51,7 +52,7 @@ namespace TheKoans
         [TestMethod]
         public void ExtensionMethodsWithVariableParameters()
         {
-            CollectionAssert.AreEqual(FILL_ME_IN, this.MethodWithVariableArguments("Cory", "Will", "Corey"));
+            CollectionAssert.AreEqual(FILL_ME_IN2, this.MethodWithVariableArguments("Cory", "Will", "Corey"));
         }
 
         //Extension methods can extend any class my referencing 
@@ -75,7 +76,7 @@ namespace TheKoans
         [TestMethod]
         public void LocalMethodsWithVariableParams()
         {
-            CollectionAssert.AreEqual(FILL_ME_IN, this.LocalMethodWithVariableParameters("Cory", "Will", "Corey"));
+            CollectionAssert.AreEqual(FILL_ME_IN2, this.LocalMethodWithVariableParameters("Cory", "Will", "Corey"));
         }
 
         //Note how we called the method by saying "this.LocalMethodWithVariableParameters"
@@ -84,7 +85,7 @@ namespace TheKoans
         [TestMethod]
         public void LocalMethodsWithoutExplicitReceiver()
         {
-            CollectionAssert.AreEqual(FILL_ME_IN, LocalMethodWithVariableParameters("Cory", "Will", "Corey"));
+            CollectionAssert.AreEqual(FILL_ME_IN2, LocalMethodWithVariableParameters("Cory", "Will", "Corey"));
         }
 
         //But it is required for Extension Methods, since it needs
